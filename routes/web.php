@@ -26,6 +26,7 @@ Route::prefix("contacts")->middleware(["auth"])->controller(ContactFormControlle
     Route::get("/{id}", "show")->name("show");
     Route::get("/{id}/edit", "edit")->name("edit");
     Route::post("/{id}", "update")->name("update");
+    Route::post("/{id}/destroy", "destroy")->name("destroy");
 });
 Route::get('/dashboard', function () {
     return view('dashboard');
