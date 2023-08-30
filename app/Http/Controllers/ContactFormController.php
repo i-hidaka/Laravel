@@ -91,6 +91,7 @@ class ContactFormController extends Controller
         $contact->email = $request->email;
         $contact->url = $request->url;
         $contact->gender = $request->gender;
+        $contact->age = $request->age;
         $contact->contact = $request->contact;
         $contact->save();
         return to_route("contacts.index");
